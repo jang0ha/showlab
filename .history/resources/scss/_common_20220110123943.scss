@@ -1,0 +1,65 @@
+
+.main{
+    // display: flex;
+    // flex: 1 1 auto;
+    // flex-direction: column;
+    .section{
+        &__video{
+            margin-top:40vmin;
+            transition: all 0.3s;
+            // transform: translateY(-2vw);
+            .video-wrap{
+                position:relative;
+                width:100%;
+                padding-bottom: 51.6%;
+                line-height: 0;
+                video{
+                    position: absolute;
+                    width:100%;
+                    padding-top:1rem;
+                    top:0;
+                    height: 100%;
+                    // padding-bottom:100%;
+                    z-index: 1;
+                    border:1px solid;
+                }
+                @include media-breakpoint-down(sm){
+                    margin-top:20vh;
+                    padding-bottom: 137%;
+                }
+            }
+        }//__video
+
+        &__cases{
+            margin-top:15vmax;
+            padding-top:10vmax;
+            .text-container{
+                overflow: hidden;
+            }
+            .quote{
+                opacity:0;
+                transform: translateY(100%);
+                will-change: opacity transform;
+                transition: opacity transform 1s  cubic-bezier(0.645, 0.045, 0.355, 1);
+                font : {
+                    size : 5vmax;
+                    weight: 600;
+                }
+            }
+            .case__item{
+                .case-card{
+                    border:1px solid #ededed;
+                    height:400px;
+                    background:#ededed;
+                    margin-top: 2rem;
+                    transition: margin-top 0.3s;
+                    &:hover{
+                        margin-top:1rem;
+                        box-shadow: $box-shadow;
+                    }
+                }
+               
+            }
+        }//__cases
+    }
+}

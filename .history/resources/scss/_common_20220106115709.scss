@@ -1,0 +1,30 @@
+
+.main{
+    // display: flex;
+    // flex: 1 1 auto;
+    // flex-direction: column;
+    .section{
+        &__video{
+            margin-top:20vmax;
+            transition: all 0.3s;
+            // transform: translateY(-2vw);
+            .video-wrap{
+                position:relative;
+                width:100%;
+                // padding-bottom: 100%;
+                line-height: 0;
+                video{
+                    position: absolute;
+                    width:100%;
+                    padding-top:1rem;
+                    top:0;
+                    height: 100%;
+                    padding-bottom:100%;
+                    z-index: 1;
+                    border:1px solid;
+                }
+            }
+        }
+    }
+    
+}

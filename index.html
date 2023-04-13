@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>showLab</title>
+    <!-- 파비콘 css-->
+    <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="resources/images/favicon-152x152.jpg">
+
+
+    <!-- 제이쿼리-ui css  -->
+    <link rel="stylesheet" href="resources/lib/jquery-ui/jquery-ui.min.css">
+    <!-- 커스텀 스크롤 바 css  -->
+    <link rel="stylesheet" href="resources/lib/mCustomScrollbar/jquery.mCustomScrollbar.css">
+    <!-- 스와이퍼 css  -->
+    <link rel="stylesheet" href="resources/lib/swiper/css/swiper-bundle.min.css">
+    <!-- 부트스트랩 css -->
+    <link rel="stylesheet" href="resources/css/bootstrap.css">
+    <!-- 스타일 css -->
+    <link rel="stylesheet" href="resources/css/style.css">
+
+
+
+
+
+    <!-- 제이쿼리 js -->
+    <script src="resources/js/jquery/jquery.min.js"></script>
+    <script src="resources/lib/jquery-ui/jquery-ui.min.js"></script>
+    <!-- 부트스트랩 js  -->
+    <script src="resources/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- 스와이퍼 js  -->
+    <script src="resources/lib/swiper/js/swiper-bundle.min.js"></script>
+
+    <!-- gsap js -->
+    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js' defer></script>
+    <script src="resources/js/gsap/gsap.min.js"></script>
+    <script src="resources/js/gsap/EasePack.min.js"></script>
+    <!-- gsap 스크롤매직 js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <!-- gsap 인디케이터 js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <!-- gsap 트윈맥스 js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <!-- gsap 애니메이션 js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <!-- gsap 스플릿텍스트 js  -->
+    <!-- <script src="https://www.greensock.com/js/src/utils/SplitText.min.js"></script> -->
+    <!-- gsap 스크롤 트리거 js -->
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <!-- gsap 모션패스플러그인 js  -->
+    <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/CSSRulePlugin.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/EasePack.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/MotionPathPlugin.min.js"></script>
+
+
+
+    <!-- 커스텀 스크롤 바 js -->
+    <script src="resources/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+
+<body id="main-scrollbar">
+    <div id="wrap">
+        <!-- 헤더 -->
+        <div id="header-block">
+            <header>
+                <div class="container">
+                    <div class="header__wrap position-relative">
+                        <div class="header__col header__col--logo">
+                            <div class="logo-wrap">
+                                <a href="index.html" class="sub-logo logo">
+                                    <img src="resources/images/sub-log.svg" alt="">
+                                </a>
+                                <a href="index.html" class="main-logo logo">
+                                    <img src="resources/images/main-large-logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__col header__col--nav">
+                            <div class="menu-wrap">
+                                <ul class="menu">
+                                    <li><a href="">WORK</a></li>
+                                    <li><a href="">CAREERS</a></li>
+                                    <li><a href="" class="translate kor">KOR</a></li>
+                                </ul>
+                            </div>
+                            <div class="header-burger">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+
+
+        <div id="headerTrigger" style="width:100%; height:1px; position:absolute;top :50vh; "></div>
+        <div id="headerfixedTrigger" style="width:100%; height:1px;  position:absolute;top :100vh; "></div>
+
+
+
+        <!-- 컨텐츠 -->
+        <div id="content-block">
+            <div id="content">
+                <div class="main">
+                    <section class="section__video">
+                        <div class="container">
+                            <!-- <a href="index.html" class="main-logo logo">
+                                <img src="resources/images/main-logo.svg" alt="">
+                            </a> -->
+                            <!-- autoplay muted loop -->
+                            <div class="video-wrap">
+                                <video src="resources/images/intro-desktop.mp4" class="d-md-block d-none" autoplay muted loop></video>
+                                <video src="resources/images/intro-mobile.mp4" class="d-md-none" autoplay muted loop></video>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section__cases">
+                        <div class="container">
+                            <div id="textTrigger" style="width:100%; height:2px; background:#111;"></div>
+
+                            <!-- <div class="quote">We help startups and enterprises<br>
+                                <span class="text-primary">design digital products</span> that just work.
+                            </div>   -->
+                            <div class="text-container">
+                                <div class="quote">
+                                    We help startups and enterprises
+                                </div>
+                            </div>
+                            <div class="text-container">
+                                <div class="quote">
+                                    <span class="text-primary">design digital products</span> that just work.
+                                </div>
+                            </div>
+
+                            <div class="row row-30">
+                                <div class="col-12 col-md-6">
+                                    <div class="case__item">
+                                        <div class="case-card"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="case__item">
+                                        <div class="case-card"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="case__item">
+                                        <div class="case-card"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="case__item">
+                                        <div class="case-card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section__horizontal-scroll-area" id="second" style="">
+                        <div class="block-list">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="block-list__item swiper-slide">
+                                        <div class="block-list__item-inner">
+                                            <div class="item-container">
+                                                <div class="item-title">
+                                                    WE ARE IN<br>
+                                                    CHARGE OF RUNNING<br>
+                                                    THE E-COMMERCE<br>
+                                                    BUSINESS OF LCK,
+                                                </div>
+                                                <div class="item-description">
+                                                    PROVIDING LCK FANS AROUND THE WORLD<br> widthORIGINAL COLLETIONS CONTAINING THE <br>SPIRIT OF LCK.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-list__item swiper-slide">
+                                        <div class="block-list__item-inner">
+                                            <div class="item-container">
+                                                <div class="item-title">
+                                                    WE ARE IN<br>
+                                                    CHARGE OF RUNNING<br>
+                                                    THE E-COMMERCE<br>
+                                                    BUSINESS OF LCK,
+                                                </div>
+                                                <div class="item-description">
+                                                    PROVIDING LCK FANS AROUND THE WORLD<br> widthORIGINAL COLLETIONS CONTAINING THE <br>SPIRIT OF LCK.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-list__item swiper-slide">
+                                        <div class="block-list__item-inner">
+                                            <div class="item-container">
+                                                <div class="item-title">
+                                                    WE ARE IN<br>
+                                                    CHARGE OF RUNNING<br>
+                                                    THE E-COMMERCE<br>
+                                                    BUSINESS OF LCK,
+                                                </div>
+                                                <div class="item-description">
+                                                    PROVIDING LCK FANS AROUND THE WORLD<br> widthORIGINAL COLLETIONS CONTAINING THE <br>SPIRIT OF LCK.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-list__item swiper-slide">
+                                        <div class="block-list__item-inner">
+                                            <div class="item-container">
+                                                <div class="item-title">
+                                                    WE ARE IN<br>
+                                                    CHARGE OF RUNNING<br>
+                                                    THE E-COMMERCE<br>
+                                                    BUSINESS OF LCK,
+                                                </div>
+                                                <div class="item-description">
+                                                    PROVIDING LCK FANS AROUND THE WORLD<br> widthORIGINAL COLLETIONS CONTAINING THE <br>SPIRIT OF LCK.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-list__item swiper-slide">
+                                        <div class="block-list__item-inner">
+                                            <div class="item-container">
+                                                <div class="item-title">
+                                                    WE ARE IN<br>
+                                                    CHARGE OF RUNNING<br>
+                                                    THE E-COMMERCE<br>
+                                                    BUSINESS OF LCK,
+                                                </div>
+                                                <div class="item-description">
+                                                    PROVIDING LCK FANS AROUND THE WORLD<br> widthORIGINAL COLLETIONS CONTAINING THE <br>SPIRIT OF LCK.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bubbles-group">
+                                <div class="bubble bubble__dummy1"></div>
+                                <div class="bubble bubble__dummy2"></div>
+                                <div class="bubble bubble__dummy3"></div>
+                                <div class="bubble bubble__dummy4"></div>
+                                <div class="bubble bubble__dummy5"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section__partners">
+                        <div class="title-area">
+                            <div class="title">PARTNERS</div>
+                            <div class="description">
+                                The SSHOWLAB media team is constantly researching and<br>producing content for custoers in its own studio
+                            </div>
+                        </div>
+                        <div class="slide-area">
+                            <div class="img-container">
+                                <div class="img-wrapper">
+                                    <ul>
+                                        <li><img src="resources/images/leaf01.png" alt=""></li>
+                                        <li><img src="resources/images/leaf02.png" alt=""></li>
+                                        <li><img src="resources/images/leaf03.png" alt=""></li>
+                                        <li><img src="resources/images/leaf04.png" alt=""></li>
+                                        <li><img src="resources/images/leaf05.png" alt=""></li>
+                                        <li><img src="resources/images/leaf01.png" alt=""></li>
+                                        <li><img src="resources/images/leaf02.png" alt=""></li>
+                                        <li><img src="resources/images/leaf03.png" alt=""></li>
+                                        <li><img src="resources/images/leaf04.png" alt=""></li>
+                                        <li><img src="resources/images/leaf05.png" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="img-wrapper">
+                                    <ul>
+                                        <li><img src="resources/images/leaf01.png" alt=""></li>
+                                        <li><img src="resources/images/leaf02.png" alt=""></li>
+                                        <li><img src="resources/images/leaf03.png" alt=""></li>
+                                        <li><img src="resources/images/leaf04.png" alt=""></li>
+                                        <li><img src="resources/images/leaf05.png" alt=""></li>
+                                        <li><img src="resources/images/leaf01.png" alt=""></li>
+                                        <li><img src="resources/images/leaf02.png" alt=""></li>
+                                        <li><img src="resources/images/leaf03.png" alt=""></li>
+                                        <li><img src="resources/images/leaf04.png" alt=""></li>
+                                        <li><img src="resources/images/leaf05.png" alt=""></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section__contact d-none">
+                        <div class="contact-container">
+
+                            <div class="box" id="move">
+
+                                <p>ENOUGH TALK, LET ENOUGH TALK, LETENOUGH TALK, LETENOUGH TALK, LETENOUGH TALK, LET</p>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- <section class="animation">
+                        <img class="paper-plane" src="https://uc6c1c451e145b4a01327ac2338c.previews.dropboxusercontent.com/p/thumb/ABJiG4ogEdgaYkv3beWCykGbqA2u54i9ddzx5g68i8nrKrHNGjYsPAr3Z4ZXofTmia5ScWHRF1B080u-BhmslfF0RTXcJZWdjLMWpVAKSIMvyR33HtHbcbBMAH8Uu7GkfSscIzp4TQ70pJ0LVQdr9JyT0mP9smzFiRK96TuEHsEMwFv9T-v6Mddg500T9PRCLQ_WmAsug7igBXt1Y2TQ2Ne4cRfxSlxmzWHArbTn89liYo_hMpJ3h0Kk4bWNQsK80VBaoFmb3TWFBvwRlV4XicCnF83_OOzPG1C3IUmOsopi15iYTdBKiVTtVDxbo81563iDv8-LHpDWWWGgQUTzwG0fCo-yP8sNZqvXh26cmEha1nXA_a-FrXaQbMARjElTuAKDsgtuYwrnkTbULdOs8g5-/p.png?size=800x600&size_mode=3" alt="paper-plane">
+                    </section> -->
+
+
+                    <section class="d-none" id="motion">
+                        <!-- <div id="rec"></div> -->
+
+                        <!-- <svg fill="none" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" viewBox="0 0 1300 3000" id="contact-svg">
+                            <path id="path" d="M1392,2002c907.5.5,1598.5,554.5,2041.5,1262.5" transform="translate(-1392 -2001.5)" stroke="blue" stroke-width="5" />
+                        </svg> -->
+                        <!-- <svg class="contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3288.73 753.82">
+                            <defs>
+                                <style>
+                                    .contact-svg {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                    }
+                                </style>
+                            </defs>
+                            <g>
+                                <g>
+                                    <path id="path" class="cls-1" d="M3288.35,753.5C2897.68,293.64,2306.28.5,1644.36.5S391.05,293.64.38,753.5" />
+                                </g>
+                            </g>
+                        </svg> -->
+
+                        <p class="txt">. GSAP </p>
+                    </section>
+
+                    <section class="animation d-none">
+                        <!-- <img class="paper-plane" src="https://uc6c1c451e145b4a01327ac2338c.previews.dropboxusercontent.com/p/thumb/ABJiG4ogEdgaYkv3beWCykGbqA2u54i9ddzx5g68i8nrKrHNGjYsPAr3Z4ZXofTmia5ScWHRF1B080u-BhmslfF0RTXcJZWdjLMWpVAKSIMvyR33HtHbcbBMAH8Uu7GkfSscIzp4TQ70pJ0LVQdr9JyT0mP9smzFiRK96TuEHsEMwFv9T-v6Mddg500T9PRCLQ_WmAsug7igBXt1Y2TQ2Ne4cRfxSlxmzWHArbTn89liYo_hMpJ3h0Kk4bWNQsK80VBaoFmb3TWFBvwRlV4XicCnF83_OOzPG1C3IUmOsopi15iYTdBKiVTtVDxbo81563iDv8-LHpDWWWGgQUTzwG0fCo-yP8sNZqvXh26cmEha1nXA_a-FrXaQbMARjElTuAKDsgtuYwrnkTbULdOs8g5-/p.png?size=800x600&size_mode=3" alt="paper-plane"> -->
+                        <!-- 1번 방법  -->
+                        <!-- <div class="paper-plane">
+                            <img src="resources/images/leaf01.png" alt="">
+                            <span>ENOUGH TALK, LETS TOGETHER</span>
+                        </div>
+                        
+                        <svg id="svg" class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width=100 height=100>
+                            <defs>
+                                <path id="MyPath" />
+                            </defs>
+                            <path id="Path" fill="none" stroke="#000" stroke-miterlimit="10" d="M3288.35,753.5C2897.68,293.64,2306.28.5,1644.36.5S391.05,293.64.38,753.5" />
+                            <text font-size="7em">
+                                <textPath id="Text" fill='#111' font-family=Raleway xlink:href="#MyPath" opacity=1 startOffset="0%" letter-spacing="5px" dominant-baseline="middle" text-anchor="middle">Love the little things.</textPath>
+                            </text>
+                        </svg> -->
+                        <!-- 1번방법 끝 -->
+
+                        <!-- 2번 방법 타임라인이라 이벤트가 계속 돌아감 스크롤시 시작 스크롤에 따라 변하는건 아님 -->
+                        <!-- <svg viewBox="0 0 500 500">
+                            <defs>
+                                <path id="MyPath" />
+                            </defs>
+                            <path id="Path" fill="none" stroke="#000" stroke-miterlimit="10" d="M3288.35,753.5C2897.68,293.64,2306.28.5,1644.36.5S391.05,293.64.38,753.5" />
+                            <text>
+                                <textpath xlink:href="#Path">
+                                    ENOUGH TALK, LETS TOGETHER EOUTH TALK, TETS TOGETHER
+                                    <animate attributeName="startOffset" from="0%" to="100%" begin="0s" dur="5s" repeatCount="indefinite" keyTimes="0;1" calcMode="spline" keySplines="0.1 0.2 .22 1" />
+                                </textpath>
+                            </text>
+                        </svg> -->
+                        <!-- 2번방법 끝 -->
+
+
+
+
+
+
+                        <!-- <svg class="paper-plane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width=100 height=100>
+                            <defs>
+                                <path id="textcircle" d="M3288.35,753.5C2897.68,293.64,2306.28.5,1644.36.5S391.05,293.64.38,753.5"></path>
+                            </defs>
+                            <g id="rotate-wrap">
+                                <text id="rotate-me" dy="70" fill="currentColor">
+                                    <textPath xlink:href="#textcircle"> ENOUGH TALK, LETS TOGETHER EOUTH TALK, TETS TOGETHER</textPath>
+                                </text>
+                            </g>
+                        </svg> -->
+
+                        <!-- <svg xml:space="preserve" class="svg">
+                            <defs>
+                                <path id="MyPath" />
+                            </defs>
+                            <path id="Path" fill="none" stroke="#000" stroke-miterlimit="10" d="M3288.35,753.5C2897.68,293.64,2306.28.5,1644.36.5S391.05,293.64.38,753.5" />
+                            <text font-size="7em">
+                                <textPath id="Text" fill='#111' font-family=Raleway xlink:href="#MyPath" opacity=1 startOffset="0%" letter-spacing="5px" dominant-baseline="middle" text-anchor="middle">Love the little things.</textPath>
+                            </text>
+                        </svg> -->
+
+                    </section>
+
+
+                    <section class="d-none" style="height:1200px;">
+
+                        <!-- 4번 방법 -->
+                        <svg id="mysvg" height="100%" width="100%">
+                            <rect x="0" y="0" width="100%" height="100%" fill="#da552f"></rect>
+                            <g id="centreMe">
+                                <image xlink:href="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover03.jpg" x="0" y="-50" height="50px" width="50px" />
+                                <text fill="#ffffff" x="80" y="0" font-size="48" font-family="Verdana">Kitty Cat</text>
+                            </g>
+                        </svg>
+                        <!-- 4번 방법 끝 -->
+                    </section>
+
+                    <section id="rotate_text_scene" class="section__contact-us">
+                        <div class="circle-container">
+
+                            <!-- 4번방법으로 시도하는 중 -->
+                            <!-- <div class="Circle js-circle">
+                                <div class="Circle-rotate">
+                                    <svg id="mysvg" class="Circle-rotateText" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                                        <defs>
+                                            <path id="textcircle" d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"></path>
+                                        </defs>
+                                        <g id="rotate-wrap">
+                                            <image xlink:href="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover03.jpg" x="0" y="-50" height="50px" width="50px" />
+                                            <text id="rotate-me" dy="70" fill="currentColor">
+                                                <textPath xlink:href="#textcircle"> ENOUGH TALK, LETS TOGETHER</textPath>
+                                            </text>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div> -->
+                            <!-- 4번방법으로 시도하는 중 끝 -->
+
+                            <!-- 3번 방법 -->
+                            <div class="Circle js-circle d-none">
+
+                                <div class="Circle-rotate">
+                                    <svg class="Circle-rotateText" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                                        <defs>
+                                            <path id="textcircle" d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"></path>
+                                        </defs>
+                                        <g id="rotate-wrap">
+                                            <pattern id="pattern1" patternUnits="userSpaceOnUse" width="160" height="160">
+                                                <image xlink:href="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover03.jpg" width="100%" hight="100%" />
+                                            </pattern>
+                                            <!-- <circle class="image-circle" r="60" stroke="black" stroke-width="2" fill="url(#pattern1)" /> -->
+                                            <text id="rotate-me" dy="70" fill="currentColor">
+                                                <textPath xlink:href="#textcircle"> ENOUGH TALK, LETS TOGETHER</textPath>
+                                            </text>
+                                        </g>
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="_레이어_2" viewBox="0 0 113.45 119.49">
+                                        <mask>
+                                            <defs>
+                                                <style>
+                                                    .cls-1 {
+                                                        fill: none;
+                                                    }
+                                                </style>
+                                            </defs>
+                                            <g id="_레이어_1-2">
+                                                <g>
+                                                    <ellipse class="cls-1" cx="56.72" cy="59.75" rx="56.72" ry="59.75" />
+                                                    <path d="M56.84,118.88c-16.32,0-30.28-5.14-40.37-14.88C5.7,93.61,0,78.42,0,60.05,0,24.69,23.19,0,56.39,0c17.97,0,29.87,8.13,36.7,14.96l.32,.32-15.13,18.16-.39-.35c-4.94-4.53-10.86-8.73-20.58-8.73-17.23,0-28.36,13.65-28.36,34.77,0,23.05,10.6,35.23,30.65,35.23,4.02,0,8.03-1.04,10.34-2.66v-17.57h-18.02v-23.29h43.3v53.85l-.15,.15c-7.06,6.78-20.8,14.03-38.21,14.03Zm-.46-117.88C23.78,1,1,25.28,1,60.05s21.92,57.83,55.84,57.83c16.99,0,30.41-7,37.37-13.61V51.85H52.92v21.29h18.02v19.07l-.2,.15c-2.47,1.85-6.74,3-11.14,3-20.71,0-31.65-12.53-31.65-36.23,0-21.73,11.52-35.77,29.36-35.77,9.81,0,15.85,4.1,20.87,8.64l13.88-16.65c-6.74-6.62-18.32-14.34-35.66-14.34Z" />
+                                                </g>
+                                            </g>
+                                        </mask>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- 3번방법 끝 -->
+
+
+                            <!-- 5번방법 이미지  g태그 안에 넣고 돌리기 !!!!! -->
+                            <div class="Circle d-md-block d-none">
+                                <svg class="Circle-rotateText" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin slice">
+                                    <defs xmlns="http://www.w3.org/2000/svg">
+                                        <style>
+                                            .cls-1 {
+                                                fill: none;
+                                                width: 1500px;
+                                                height: 1500px;
+                                            }
+
+                                            .cls-2 {
+                                                clip-path: url(#clip-path);
+                                            }
+                                        </style>
+                                        <clipPath id="clip-path" transform="translate(-452 219.87)">
+                                            <circle class="cls-1" cx="812" cy="409.22" r="180" />
+                                        </clipPath>
+                                    </defs>
+                                    <g id="rotate-wrap">
+                                        <!-- <pattern id="pattern1" patternUnits="userSpaceOnUse" width="160" height="160">
+                                            <image xlink:href="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover03.jpg" width="100%" hight="100%" />
+                                        </pattern> -->
+                                        <!-- <circle class="image-circle" r="60" stroke="black" stroke-width="2" fill="url(#pattern1)" /> -->
+                                        <text id="rotate-me" dy="70" fill="currentColor">
+                                            <textPath xlink:href="#textcircle"> ENOUGH TALK, LETS TOGETHER</textPath>
+                                        </text>
+                                        <g>
+                                            <image width="20" height="20" x="36%" y="23.5%" xlink:href="resources/images/rotate-img-2.svg">
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <!-- 5번 방법 끝!!!  -->
+
+                            <!-- 모바일일때 직선 텍스트 애니메이션  -->
+                            <div class="liner-text-container d-md-none">
+                                <img src="resources/images/rotate-img-2.svg" alt="">
+                                <span>ENOUGH TALK, LETS TOGETHER</span>
+                            </div>
+
+
+
+
+                            <svg width="200" height="200">
+                                <circle cx="100" cy="100" r="40" stroke="green" stroke-width="5" fill="yellow" />
+                                Sorry, your browser does not support inline SVG.
+                            </svg>
+
+
+                        </div>
+
+                        <div class="contact-container">
+                            <div class="container">
+                                <div class="row row-0 justify-content-between">
+                                    <div class="col-lg-5 col-12">
+                                        <div class="contact-text-wrap">
+                                            <div class="contact-title">
+                                                CONTACT US<br>
+                                                TO GET IN TOUCH
+                                            </div>
+                                            <div class="contact-description">
+                                                Fill out the form and we will be in touch. Thanks!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 col-12">
+                                        <form action="" autocomplete="off">
+                                            <div class="row row-20">
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="form-group">
+                                                        <label for="first-name">First Name *</label>
+                                                        <input type="text" id="first-name" class="custom-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="form-group">
+                                                        <label for="last-name">Last Name *</label>
+                                                        <input type="text" id="last-name" class="custom-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="form-group">
+                                                        <label for="business-email">Business Email *</label>
+                                                        <input type="text" id="business-email" class="custom-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="form-group">
+                                                        <label for="phone">Phone *</label>
+                                                        <input type="text" id="phone" class="custom-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="form-group">
+                                                        <label for="titte">Titte *</label>
+                                                        <input type="text" id="titte" class="custom-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="form-group">
+                                                        <label for="company">Company *</label>
+                                                        <input type="text" id="company" class="custom-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="form-group">
+                                                        <label for="help">How can we help *</label>
+                                                        <input type="text" id="help" class="custom-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="form-group">
+                                                        <label for="message">Message *</label>
+                                                        <input type="text" id="message" class="custom-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8 col-12">
+                                                    <button class="btn btn-block custom-button main-btn m-t-100">SUBMIT</button>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="d-none" style="height:1200px; background:#ededed;">
+                        <a href="/sub/infra/itservice.php#tab2" class="bubbb">More View</a>
+                    </section>
+                    <section class="d-none" style="height:1200px;"></section>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 푸터 -->
+        <div id="footer-block">
+            <footer>
+                <div class="container">
+                    <div>
+                        <div class="title">SEOUL</div>
+                        <div class="email">partnership@sshowlab.com</div>
+                        <div class="address">21. seolleung-ro 125-gil, Gangnam-gu, Seoulm<br>
+                            Republic of korea, 06100
+                        </div>
+                    </div>
+                    <div class="copyright-wrap">
+                        <div class="copyright">COPYRIGHT C BY SSHOWLAB ALL RIGHTS RESERVED.</div>
+                        <div class="sns">
+                            <ul>
+                                <li><a href="">FACEBOOK</a></li>
+                                <li><a href="">INSTAGRAM</a></li>
+                                <li><a href="">YOUTUBE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- ui.js  -->
+    <script src="resources/js/ui.js"></script>
+    <script src="resources/js/animation.js"></script>
+
+    <script>
+        // 가로스크롤이 슬라이드로 변신
+        // const introSwiper = new Swiper('.block-list .swiper-container', {
+        //     // Default parameters
+        //     slidesPerView: 'auto',
+        //     spaceBetween: 12,
+        //     scrollbar: {
+        //         el: ".swiper-scrollbar-rank",
+        //         hide: false,
+        //     },
+        //     slidesOffsetBefore: 20,
+        //     slidesOffsetAfter: 20,
+        //     watchOverflow: true, // 슬라이드가 1개 일 떄 pager, button 숨김 여부 설정!
+        //     autoplay: {
+        //         delay: 2000,
+        //     },
+        //     //탭이나 팝업 형태로 swiper사용 할때 (==> 처음에는 보이지 않는 display:none 상태인 요소에 사용할때  observer, observeParents 추가 해줘야함. 해당요소와 부모요소를 감지하여 DOM 변화가 있으며 swiper를 초기화하여 문제를 해결 가능!! )
+        //     observer: true,
+        //     observeParents: true,
+        // });
+
+
+        // let ww = window.innerWidth;
+        // let introSwiper;
+
+        // responsiveSwiper();
+
+        // function initSwiper(effect) {
+        //     if (typeof (introSwiper) == 'object') introSwiper.destroy();
+
+        //     return introSwiper = new Swiper('.block-list .swiper-container', {
+        //         // Default parameters
+        //         slidesPerView: 'auto',
+        //         spaceBetween: 12,
+        //         scrollbar: {
+        //             el: ".swiper-scrollbar-rank",
+        //             hide: false,
+        //         },
+        //         slidesOffsetBefore: 20,
+        //         slidesOffsetAfter: 20,
+        //         watchOverflow: true, // 슬라이드가 1개 일 떄 pager, button 숨김 여부 설정!
+        //         autoplay: {
+        //             delay: 2000,
+        //         },
+        //         //탭이나 팝업 형태로 swiper사용 할때 (==> 처음에는 보이지 않는 display:none 상태인 요소에 사용할때  observer, observeParents 추가 해줘야함. 해당요소와 부모요소를 감지하여 DOM 변화가 있으며 swiper를 초기화하여 문제를 해결 가능!! )
+        //         observer: true,
+        //         observeParents: true,
+        //         effect: effect
+        //     })
+        // }
+
+        // function responsiveSwiper() {
+        //     if (ww > 768) {
+        //         // 768초과일때 슬라이드 파괴
+        //         // introSwiper.destroy(true, true);
+        //         introSwiper.disable();
+        //     } else {
+
+        //         // 슬라이드 효과
+        //         initSwiper('slide');
+        //         introSwiper.enable();
+
+        //         // initSwiper('fade');
+        //     }
+        // }
+
+        // window.addEventListener('resize', function () {
+        //     ww = window.innerWidth;
+        //     responsiveSwiper();
+        // });
+
+
+
+        var ww = $(window).width();
+        var mySwiper = undefined;
+
+        function initSwiper() {
+
+            if (ww <= 769 && mySwiper == undefined) {
+                mySwiper = new Swiper('.block-list .swiper-container', {
+                    // Default parameters
+                    slidesPerView: 'auto',
+                    spaceBetween: 12,
+                    scrollbar: {
+                        el: ".swiper-scrollbar-rank",
+                        hide: false,
+                    },
+                    slidesOffsetBefore: 20,
+                    slidesOffsetAfter: 20,
+                    watchOverflow: true, // 슬라이드가 1개 일 떄 pager, button 숨김 여부 설정!
+                    autoplay: {
+                        delay: 2000,
+                    },
+                    //탭이나 팝업 형태로 swiper사용 할때 (==> 처음에는 보이지 않는 display:none 상태인 요소에 사용할때  observer, observeParents 추가 해줘야함. 해당요소와 부모요소를 감지하여 DOM 변화가 있으며 swiper를 초기화하여 문제를 해결 가능!! )
+                    observer: true,
+                    observeParents: true,
+                });
+            } else if (ww > 768 && mySwiper != undefined) {
+                mySwiper.destroy();
+                mySwiper = undefined;
+            } else if (ww > 768) {
+                $(".block-list .swiper-container").addClass("disabled");
+            }
+        }
+
+        initSwiper();
+
+        $(window).on('resize', function () {
+            ww = $(window).width();
+            initSwiper();
+        });
+    </script>
+</body>
+
+</html>

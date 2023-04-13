@@ -1,0 +1,26 @@
+
+.main{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    .section{
+        &__video{
+            transition: all 0.3s;
+            // transform: translateY(-2vw);
+            .video-wrap{
+                position:relative;
+                width:100%;
+                video{
+                    position: absolute;
+                    width:100%;
+                    margin-top:1rem;
+                    top:15vmax;
+                    _padding-bottom:100%;
+                    z-index: 1;
+                    _border:1px solid
+                }
+            }
+        }
+    }
+    
+}

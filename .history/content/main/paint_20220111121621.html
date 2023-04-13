@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>showLab</title>
+    <!-- 파비콘 css-->
+    <link rel="icon" href="/resources/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/resources/images/favicon-152x152.jpg">
+
+
+    <!-- 제이쿼리-ui css  -->
+    <link rel="stylesheet" href="/resources/lib/jquery-ui/jquery-ui.min.css">
+    <!-- 커스텀 스크롤 바 css  -->
+    <link rel="stylesheet" href="/resources/lib/mCustomScrollbar/jquery.mCustomScrollbar.css">
+    <!-- 부트스트랩 css -->
+    <link rel="stylesheet" href="/resources/css/bootstrap.css">
+    <!-- 스타일 css -->
+    <link rel="stylesheet" href="/resources/css/style.css">
+
+
+
+
+
+    <!-- 제이쿼리 js -->
+    <script src="/resources/js/jquery/jquery.min.js"></script>
+    <script src="/resources/lib/jquery-ui/jquery-ui.min.js"></script>
+    <!-- 부트스트랩 js  -->
+    <script src="/resources/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- gsap js -->
+    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js' defer></script>
+    <script src="/resources/js/gsap/gsap.min.js"></script>
+    <script src="/resources/js/gsap/EasePack.min.js"></script>
+    <!-- gsap 스크롤매직 js  -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <!-- gsap 인디케이터 js  -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <!-- gsap 트윈맥스 js  -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <!-- gsap 애니메이션 js  -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <!-- gsap 스플릿텍스트 js  -->
+    <script src="https://www.greensock.com/js/src/utils/SplitText.min.js"></script>
+
+
+    <!-- 커스텀 스크롤 바 js -->
+    <script src="/resources/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+
+<body id="main-scrollbar">
+    <div id="wrap">
+        <!-- 헤더 -->
+        <div id="header-block">
+            <header>
+                <div class="container">
+                    <div class="header__wrap position-relative">
+                        <div class="header__col header__col--logo">
+                            <div class="logo-wrap">
+                                <a href="../main/main.html" class="sub-logo logo">
+                                    <img src="../../resources/images/sub-log.svg" alt="">
+                                </a>
+                                <a href="../main/main.html" class="main-logo logo">
+                                    <img src="../../resources/images/main-large-logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__col header__col--nav">
+                            <div class="menu-wrap">
+                                <ul class="menu">
+                                    <li><a href="">WORK</a></li>
+                                    <li><a href="">CAREERS</a></li>
+                                    <li><a href="" class="translate kor">KOR</a></li>
+                                </ul>
+                            </div>
+                            <div class="header-burger">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+
+
+        <div id="headerTrigger" style="width:100%; height:1px; background:red; position:absolute;top :50vh;"></div>
+        <div id="headerfixedTrigger" style="width:100%; height:1px; background:pink; position:absolute;top :100vh;"></div>
+
+
+
+        <!-- 컨텐츠 -->
+        <div id="content-block">
+            <div id="content">
+                <div class="main">
+                    <section class="section__video">
+                        <div class="container">
+                            <!-- <a href="../main/main.html" class="main-logo logo">
+                                <img src="../../resources/images/main-logo.svg" alt="">
+                            </a> -->
+                            <!-- autoplay muted loop -->
+                            <div class="video-wrap">
+                                <video src="../../resources/images/intro-desktop.mp4" class="d-md-block d-none"></video>
+                                <video src="../../resources/images/intro-mobile.mp4" class="d-md-none"></video>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section__cases">
+                        <div class="container">
+                            <div id="textTrigger" style="width:100%; height:2px; background:#111;"></div>
+
+                            <!-- <div class="quote">We help startups and enterprises<br>
+                                <span class="text-primary">design digital products</span> that just work.
+                            </div>   -->
+                            <div class="text-container">
+                                <div class="quote">
+                                    We help startups and enterprises
+                                </div>
+                            </div>
+                            <div class="text-container">
+                                <div class="quote">
+                                    <span class="text-primary">design digital products</span> that just work.
+                                </div>
+                            </div>
+
+                            <div class="row row-30">
+                                <div class="col-12 col-md-6">
+                                    <div class="case__item">
+                                        <div class="case-card"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="case__item">
+                                        <div class="case-card"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="case__item">
+                                        <div class="case-card"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="case__item">
+                                        <div class="case-card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section__horizontal-scroll-area" id="second" style="">
+                        <div class="block-list">
+                            <div class="block-list__item">
+                                <div class="block-list__item-inner">
+                                    <div class="item-container">
+                                        <div class="item-title">
+                                            WE ARE IN<br>
+                                            CHARGE OF RUNNING<br>
+                                            THE E-COMMERCE<br>
+                                            BUSINESS OF LCK,
+                                        </div>
+                                        <div class="item-description">
+                                            PROVIDING LCK FANS AROUND THE WORLD<br> widthORIGINAL COLLETIONS CONTAINING THE <br>SPIRIT OF LCK.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-list__item">
+                                <div class="block-list__item-inner">
+                                    <div class="item-container">
+                                        <div class="item-title">
+                                            WE ARE IN<br>
+                                            CHARGE OF RUNNING<br>
+                                            THE E-COMMERCE<br>
+                                            BUSINESS OF LCK,
+                                        </div>
+                                        <div class="item-description">
+                                            PROVIDING LCK FANS AROUND THE WORLD<br> widthORIGINAL COLLETIONS CONTAINING THE <br>SPIRIT OF LCK.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-list__item">
+                                <div class="block-list__item-inner">
+                                    <div class="item-container">
+                                        <div class="item-title">
+                                            WE ARE IN<br>
+                                            CHARGE OF RUNNING<br>
+                                            THE E-COMMERCE<br>
+                                            BUSINESS OF LCK,
+                                        </div>
+                                        <div class="item-description">
+                                            PROVIDING LCK FANS AROUND THE WORLD<br> widthORIGINAL COLLETIONS CONTAINING THE <br>SPIRIT OF LCK.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-list__item">
+                                <div class="block-list__item-inner">
+                                    <div class="item-container">
+                                        <div class="item-title">
+                                            WE ARE IN<br>
+                                            CHARGE OF RUNNING<br>
+                                            THE E-COMMERCE<br>
+                                            BUSINESS OF LCK,
+                                        </div>
+                                        <div class="item-description">
+                                            PROVIDING LCK FANS AROUND THE WORLD<br> widthORIGINAL COLLETIONS CONTAINING THE <br>SPIRIT OF LCK.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-list__item">
+                                <div class="block-list__item-inner">
+                                    <div class="item-container">
+                                        <div class="item-title">
+                                            WE ARE IN<br>
+                                            CHARGE OF RUNNING<br>
+                                            THE E-COMMERCE<br>
+                                            BUSINESS OF LCK,
+                                        </div>
+                                        <div class="item-description">
+                                            PROVIDING LCK FANS AROUND THE WORLD<br> widthORIGINAL COLLETIONS CONTAINING THE <br>SPIRIT OF LCK.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bubbles-group">
+                            <div class="bubble bubble__dummy1"></div>
+                            <div class="bubble bubble__dummy2"></div>
+                            <div class="bubble bubble__dummy3"></div>
+                            <div class="bubble bubble__dummy4"></div>
+                            <div class="bubble bubble__dummy5"></div>
+                        </div>
+                    </section>
+
+                    <section style="height:1200px; background-color: red; min-height: 100vh;"></section>
+                    <section style="height:1200px; background:#ededed;"></section>
+                    <section style="height:1200px;"></section>
+                    <section style="height:1200px; background:#ededed;"></section>
+                    <section style="height:1200px;"></section>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 푸터 -->
+        <div id="footer-block"></div>
+    </div>
+
+    <!-- ui.js  -->
+    <script src="/resources/js/ui.js"></script>
+    <script src="/resources/js/animation.js"></script>
+    <script>
+        //section__vertical-scroll-area 버블버블 동동떠다니게
+$('.bubble').each((i, obj) => {
+    let ANIMATION_TIME = getRandomNumber(7, 15),// 최소값, 최대값의 오차범위가 작을수록 빨라짐
+        maxAnimation = getRandomNumber(15, 30), // 최대값
+        minAnimation = getRandomNumber(7, 100); // 최소값
+
+    TweenMax.to(obj, ANIMATION_TIME, {
+        // tweenMax.to => this속성에서 지정한 속성까지 <대상타겟, 지속시간>
+        //this=obj를 ANIMATION_TIME 동안 tween함.
+      
+        //bezier => 곡선의 움직임 좌표값을지정 해줘야함 ex )) 가 세 높.
+        bezier: [{
+            x: minAnimation,
+            y: minAnimation
+        },
+        {
+            x: 0,
+            y: maxAnimation
+        },
+        {
+            x: -minAnimation,
+            y: minAnimation
+        },
+        {
+            x: 0,
+            y: 0
+        }],
+        repeat: 100,// 반복
+        type:"soft",//부드럽게 이동 기본값은 "thru"
+        ease: Linear.easeNone,
+    });
+});
+
+
+
+//주어진 두 값 사이의 난수(무작위의 수)를 생성한다.  min보다 크거나 같으며 , max보다 작다.
+function getRandomNumber(min, max) {
+  
+    //Math.floor 정수!!
+    return Math.floor(Math.random() * (max - min + 1)) + min;//최소~최대 랜덤 숫자 가져오기
+}
+
+
+//참고 사이트 https://recoveryman.tistory.com/466
+    </script>
+</body>
+
+</html>

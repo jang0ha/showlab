@@ -1,0 +1,22 @@
+
+.main{
+    .section{
+        &__video{
+            transition: all 0.3s;
+            .video-wrap{
+                position:relative;
+                width:100%;
+                transform: translateY(-2vw);
+                video{
+                    position: absolute;
+                    width:100%;
+                    top:400px;
+                    padding-bottom:100%;
+                    z-index: 1;
+                    border:1px solid
+                }
+            }
+        }
+    }
+    
+}

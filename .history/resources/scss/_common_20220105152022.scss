@@ -1,0 +1,19 @@
+
+.main{
+    .section{
+        &__video{
+            .video-wrap{
+                position:relative;
+                width:100%;
+                video{
+                    position: absolute;
+                    width:100%;
+                    top:400px;
+                    padding-bottom:100%;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    
+}
